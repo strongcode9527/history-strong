@@ -1,0 +1,33 @@
+{
+  "name": "history-strong",
+  "version": "1.0.0",
+  "description": "Manipulate the history in the browser",
+  "main": "webpack.config.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/strongcode9527/history-strong.git"
+  },
+  "keywords": [
+    "history",
+    "js",
+    "browser"
+  ],
+  "author": "strong",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/strongcode9527/history-strong/issues"
+  },
+  "homepage": "https://github.com/strongcode9527/history-strong#readme",
+  "devDependencies": {
+    "babel-eslint": "^8.0.3",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-stage-3": "^6.24.1",
+    "eslint": "^4.12.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7",
+    "webpack-html-plugin": "^0.1.1"
+  }
+}
