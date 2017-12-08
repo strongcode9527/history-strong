@@ -1,13 +1,14 @@
-const path = require('path') 
-
+var path = require('path'),
+  HtmlWebpackPlugin = require('html-webpack-plugin'),
+  webpack = require('webpack')
 
 module.exports = {
   entry: {
     index: ['./examples/index.js']
   },
   output: {
-    library: "MyLibrary",
-    libraryTarget: "amd"
+    filename: 'bundle.js',
+    path: path.resolve(__dirname,'/dist')
   },
   module: {
     rules: [
@@ -17,6 +18,9 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
+  },
+  devServer: {
+    open: true
   },
   plugins: [
     new HtmlWebpackPlugin({
