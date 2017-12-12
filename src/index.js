@@ -1,2 +1,2 @@
-export {hashHistory} from './hashHistory'
-export {browserHistory} from './browserHistory' 
+export {default as hashHistory} from './hashHistory'
+export {default as browserHistory}  from './browserHistory'
