@@ -2,24 +2,35 @@ const manager = () => {
   const listeners = []
 
   function addListener(fn) {
-    if(listeners.find(fn), typeof fn !== 'function') {
+    if(listeners.find(item => item === fn), typeof fn !== 'function') {
       return
     }
     listeners.push(fn)
+    const length = listeners.length
+    return () => {
+      listener.splice(length - 1, 1)
+      alert() 
+    }
   }
 
-  function notifyListener(something) {
+  function notifyListeners(something) {
     try{
       listeners.forEach(listener => listener(something))
     }
     catch(e) {
-      console.log(e)
+      console.warn(e) 
     }
+  }
+  
+  function getListener() {
+    return listeners
   }
 
   return {
     addListener,
-    notifyListener,
+    getListener,
+    notifyListeners,
   }
 }
 
+export default manager
